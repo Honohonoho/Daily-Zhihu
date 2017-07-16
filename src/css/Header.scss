@@ -1,0 +1,36 @@
+.header{
+  margin: 0 auto;
+  width: 960px;
+  position: fixed;
+  background: #fff;
+  height: 78px;
+  right: 0;
+  left: 0;
+  top: 0;
+  .container{
+    display: flex;
+    justify-content: space-between;
+    align-content: center;
+    height: 78px;
+    .top-nav{
+      display: flex;
+      justify-content: space-between;
+      align-content: center;
+      height: 78px;
+      a{
+        display: flex;
+        align-content: center;
+        justify-content: center;
+        height: 32px;
+        span{
+          color: #008bed;
+          background: #f0f9ff;
+          border-radius: 3px;
+          padding: 8px 0;
+          width: 120px;
+          line-height: 16px;
+        }
+      }
+    }
+  }
+}
