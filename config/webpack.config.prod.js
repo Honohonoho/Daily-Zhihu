@@ -143,6 +143,7 @@ module.exports = {
           /\.gif$/,
           /\.jpe?g$/,
           /\.png$/,
+          /\.sass$/,
           /\.scss$/,
         ],
         loader: require.resolve('file-loader'),
@@ -169,6 +170,11 @@ module.exports = {
           
           compact: true,
         },
+      },
+      {
+        test: /\.scss$/,
+        include: paths.appSrc,
+        loaders: [require.resolve('style-loader'), require.resolve('css-loader'), require.resolve('sass-loader')]
       },
       // The notation here is somewhat confusing.
       // "postcss" loader applies autoprefixer to our CSS.
