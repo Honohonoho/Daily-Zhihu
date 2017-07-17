@@ -88,5 +88,13 @@ module.exports = function(proxy, allowedHost) {
       // https://github.com/facebookincubator/create-react-app/issues/2272#issuecomment-302832432
       app.use(noopServiceWorkerMiddleware());
     },
+    //设置代理
+    proxy: {
+      '/api': {
+        target: 'http://news-at.zhihu.com',
+        secure: false,
+        changeOrigin: true,
+      }
+    }
   };
 };

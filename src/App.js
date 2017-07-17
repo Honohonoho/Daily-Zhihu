@@ -2,6 +2,7 @@ import React, { Component } from 'react';
 import './App.css';
 import Header from './components/Header'
 import Download from './components/Download'
+import Main from './components/Main'
 
 class App extends Component {
   render() {
@@ -9,9 +10,7 @@ class App extends Component {
       <div className="App">
         <Header />
         <Download />
-        <div className="main">
-          main
-        </div>
+        <Main />
         <div className="footer">
           footer
         </div>
