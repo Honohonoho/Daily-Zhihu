@@ -1,0 +1,75 @@
+.download{
+  margin-top: 78px;
+  height: 460px;
+  background: #008bed;
+  .container{
+    margin: 0 auto;
+    width: 960px;
+    height: 460px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    .wrap-left{
+      height: 460px;
+      img{
+        margin-top: 12px;
+      }
+    }
+    .wrap-right{
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .content{
+        width: 392px;
+        .text{
+          color: #99d1f8;
+          line-height: 26px;
+          height: 100px;
+        }
+      }
+      .address{
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+        width: 392px;
+        .code{
+          width: 145px;
+          height: 153px;
+          background: #fff;
+          border-radius: 3px;
+          img{
+            margin: 9px 0 0 5px;
+          }
+        }
+        .version{
+          height: 153px;
+          display: flex;
+          flex-direction: column;
+          justify-content: space-between;
+          .iphone,.android{
+            height: 64px;
+            width: 200px;
+            background: #fff;
+            border-radius: 3px;
+            cursor: pointer;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            &:hover{
+              background-color: #e0f3ff;
+            }
+            .text{
+              line-height: 64px;
+              font-size: 22px;
+              text-align: center;
+              width: 108px;
+              font-weight: normal;
+              color: #39442e;
+            }
+          }
+        }
+      }
+    }
+  }
+}
