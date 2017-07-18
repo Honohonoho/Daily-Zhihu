@@ -1,43 +1,51 @@
 import React, { Component } from 'react'
-// import LoadData from './LoadData'
 import LocalUrl from './LocalUrl'
+import '../css/Stories.scss'
 
 class Stories extends Component {
   constructor(props){
     super(props)
     this.state = {
-      isLoading: true,
-      imgUrl: []
+      storiesList: []
     }
   }
   componentDidMount(){
     let path = LocalUrl + '/api/4/news/latest'
-    // console.log(path)
     fetch(path)
       .then( resopnse => {
         return resopnse.json()
       })
       .then( data => {
-        this.getImgUrl(data)
+        this.getStoryItem(data)
       })
-      .catch(e => {
+      .catch( e => {
         console.log('Oops, error', e)
       })
 
   }
-  getImgUrl(data){
-    let storiesList = data.stories
-    let imgUrlList = []
-    storiesList.map((item) => {
-      imgUrlList.push(item.images[0])
+  getStoryItem(data){
+    let stories = []
+    data.stories.map( item => {
+      return stories.push(item)
     })
-    this.setState({imgUrl: imgUrlList})
-    console.log(this.state.imgUrl)
+    this.setState({storiesList: stories})
+    console.log(this.state.storiesList)
   }
 
   render(){
     return(
-      <img src={this.state.imgUrl[0]} alt=""/>
+      <div className="stories">
+        {this.state.storiesList.map( (item,index) => {
+          return(
+            <div className="storyItem" key={index}>
+              <a href="">
+                <img src={item.images[0]} alt=""/>
+                <p className="title">{item.title}</p>
+              </a>
+            </div>
+          )
+        })}
+      </div>
     )
   }
 }

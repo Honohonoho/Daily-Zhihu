@@ -1,6 +1,15 @@
 .main{
-  .news{
-    width: 300px;
-    height: 300px;
+  background-color: #f9f9f9;
+  >.title{
+    width: 960px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 25px;
+    padding: 44px 0 44px;
+    >.latest{
+      color: #ccc;
+    }
   }
 }
