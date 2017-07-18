@@ -1,6 +1,6 @@
 import React, { Component } from 'react'
 import '../css/Main.scss'
-import LoadData from './LoadData'
+import Stories from './Stories'
 
 class Main extends Component {
   render(){
@@ -11,7 +11,7 @@ class Main extends Component {
             <img src="" alt=""/>
             <p></p>
           </div>
-          <LoadData />
+          <Stories />
       </div>
     )
   }
