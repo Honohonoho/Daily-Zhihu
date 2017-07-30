@@ -1,6 +1,7 @@
 import React, { Component } from 'react'
 import LocalUrl from './LocalUrl'
 import StoryDetail from './StoryDetail'
+import {Link, Route, BrowserRouter as Router} from 'react-router-dom' 
 import '../css/Stories.scss'
 
 class Stories extends Component {
@@ -42,10 +43,11 @@ class Stories extends Component {
         {this.state.storiesList.map( (item,index) => {
           return(
             <div className="storyItem" key={index}>
-              <a href={this.getStoryId(item.id)} target="_blank"> 
+              <Link to={this.getStoryId(item.id)} target="_blank"> {/* this.getStoryId(item.id) */}
                 <img src={item.images[0]} alt=""/>
                 <p className="title">{item.title}</p>
-              </a>
+              </Link>
+              <Route path="story/:storyId" component={StoryDetail}></Route>
             </div>
           )
         })}
